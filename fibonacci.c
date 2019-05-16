@@ -1,27 +1,62 @@
 #include<stdio.h>
 
-unsigned long long int fibonacci(unsigned int  n);	//prototip
 
-int main(void)
-{
-	unsigned long long int result;	//fibonacci value
-	unsigned int number; 	//input by user
-	
-	printf("Tamsayi giriniz: ");
-	scanf("%u",&number);
-	
-	result=fibonacci(number); 	//kullanýcýdan alýnan sayinin fibonacci degerinin hesaplanmasý.
-	
-	printf("Fibonacci(%1d)= %11u \n",number , result);	//sonucu görüntülenmesi
-return 0;
-}
+        int main()
 
-unsigned long long int fibonacci(unsigned int n)	//fibonacci fonksiyonunun recursive tanimi..
-{
-	if(n==0 || n==1){		//ana olay..
-		return n;
-	}
-	else{	//recursive adim
-		return fibonacci(n - 1) + fibonacci(n - 2);
-	}
-}
+
+        {
+
+
+         int x=0,y=1,sayi,i,degisken;
+
+
+         printf("kac hane istiyorsunuz?");
+
+
+         scanf("%d",&sayi);
+
+
+
+
+
+         printf("%d  ",x);
+
+
+         printf("%d  ",y);
+
+
+         for(i=0;i<sayi-2;++i)
+
+
+         {
+
+
+            printf("%d  ",x+y);
+
+
+             degisken=x;
+
+
+             x=y;
+
+
+            y=degisken+y;
+
+
+
+
+
+         }
+
+
+
+
+
+         getchar();getchar();
+
+
+         return 0;
+
+
+        }
+
